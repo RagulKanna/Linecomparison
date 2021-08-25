@@ -12,14 +12,14 @@ public class Linecomparison {
         y1 = input.nextInt();
         x2 = input.nextInt();
         y2 = input.nextInt();
-        greater();
+        lesser();
 
     }
-    public static void greater()
+    public static void lesser()
     {
-        if(x2==y2)
-            System.out.println("The Line X is greater than Line Y");
+        if(x2<y2)
+            System.out.println("The Line X is lesser than Line Y");
         else
-            System.out.println("The Line X is not greater than Line Y");
+            System.out.println("The Line X is not lesser than Line Y");
     }
 }
