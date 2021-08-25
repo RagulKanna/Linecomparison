@@ -17,7 +17,7 @@ public class Linecomparison {
     }
     public static void greater()
     {
-        if(x2==y2)
+        if(x2>y2)
             System.out.println("The Line X is greater than Line Y");
         else
             System.out.println("The Line X is not greater than Line Y");
