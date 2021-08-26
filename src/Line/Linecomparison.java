@@ -3,23 +3,36 @@ package Line;
 import java.util.Scanner;
 
 public class Linecomparison {
-   public static int x1, x2, y1, y2;
-    public static void main(String[] args) {
+  public static Integer x1, x2, y1, y2,Length1,Length2;
+        public static void main(String[] args) {
         System.out.println("    Welcome to  the LineComparison");
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter values of Coordinates x1,y1,x2,y2");
-        x1 = input.nextInt();
-        y1 = input.nextInt();
-        x2 = input.nextInt();
-        y2 = input.nextInt();
-        lesser();
+        Scanner val = new Scanner(System.in);
 
+            System.out.println("Enter values of Coordinates for  x1,y1,x2,y2 of 1 Line ");
+            x1 = val.nextInt();
+            y1 = val.nextInt();
+            x2 = val.nextInt();
+            y2 = val.nextInt();
+            Length1=(int)(Math.sqrt(Math.pow( (x2-x1) ,2 ) + Math.pow( (y2-y1) , 2) ));
+            System.out.println("Length of the Line is "+Length1);
+            System.out.println("Enter values of Coordinates for  x1,y1,x2,y2 of 1 Line ");
+            x1 = val.nextInt();
+            y1 = val.nextInt();
+            x2 = val.nextInt();
+            y2 = val.nextInt();
+            Length2=(int)(Math.sqrt(Math.pow( (x2-x1) ,2 ) + Math.pow( (y2-y1) , 2) ));
+            System.out.println("Length of the Line is "+Length2);
+
+        lesser();
     }
     public static void lesser()
     {
-        if(x2<y2)
-            System.out.println("The Line X is lesser than Line Y");
+        int result=Length1.compareTo(Length2);
+        if(result<0)
+            System.out.println("The line a is Lesser");
+        else if(result == 0)
+            System.out.println("The lines a&b are equal");
         else
-            System.out.println("The Line X is not lesser than Line Y");
+            System.out.println("The line b is Lesser");
     }
 }
